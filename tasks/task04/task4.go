@@ -20,7 +20,7 @@ import (
 */
 
 func main() {
-	// объявление переменных-границ формирования псевдо-случайных чисел
+	// инициализация переменных-границ формирования псевдо-случайных чисел
 	var (
 		minValue = 1
 		maxValue = 1000
@@ -79,8 +79,7 @@ func main() {
 			fmt.Println("горутина main остановлена")
 			return
 		// запись псевдо-случайного числа в канал
-		default:
-			ch <- minValue + rand.Intn(maxValue-minValue)
+		case ch <- minValue + rand.Intn(maxValue-minValue):
 			// time sleep для более приемлемого вывода
 			time.Sleep(time.Second / 5)
 		}
