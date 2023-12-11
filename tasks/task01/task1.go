@@ -38,19 +38,8 @@ func NewHuman(firstName, lastName string, age uint8) (*Human, error) {
 	}, nil
 }
 
-// getFirstName - метод получения поля "имя"
-func (h Human) getFirstName() string {
-	return h.FirstName
-}
-
-// getLastName - метод получения поля "фамилия"
-func (h Human) getLastName() string {
-	return h.LastName
-}
-
-// getAge - метод получения поля "возраст"
-func (h Human) getAge() uint8 {
-	return h.Age
+func (h Human) greeting() string {
+	return fmt.Sprintf("Приветствую тебя, %s %s", h.FirstName, h.LastName)
 }
 
 func main() {
@@ -61,6 +50,7 @@ func main() {
 	)
 
 	// получение поля "имя" из буфера
+	fmt.Print("Введите имя: ")
 	_, err := fmt.Scan(&newFirstName)
 	if err != nil {
 		fmt.Printf(`Ошибка при получении поля "имя" - %s`, err)
@@ -68,6 +58,7 @@ func main() {
 	}
 
 	// получение поля "фамилия" из буфера
+	fmt.Print("Введите фамилию: ")
 	_, err = fmt.Scan(&newLastName)
 	if err != nil {
 		fmt.Printf(`Ошибка при получении поля "фамилия" - %s`, err)
@@ -75,6 +66,7 @@ func main() {
 	}
 
 	// получение поля "возраст" из буфера
+	fmt.Print("Введите возраст: ")
 	_, err = fmt.Scan(&newAge)
 	if err != nil {
 		fmt.Printf(`Ошибка при получении поля "возраст" - %s`, err)
@@ -95,7 +87,6 @@ func main() {
 	fmt.Printf("Имя: %s\nФамилия: %s\nВозраст: %d\n\n",
 		action.FirstName, action.LastName, action.Age)
 
-	// получение полей структуры, с помощью методов
-	fmt.Printf("Имя: %s\nФамилия: %s\nВозраст: %d\n",
-		action.getFirstName(), action.getLastName(), action.getAge())
+	// вызов метода
+	fmt.Println(action.greeting())
 }
