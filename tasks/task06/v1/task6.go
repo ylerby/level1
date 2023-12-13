@@ -31,7 +31,7 @@ func main() {
 	fmt.Print("Введите искомое значение: ")
 	_, err := fmt.Scan(&stopValue)
 	if err != nil {
-		fmt.Println("ошибка при получении числа")
+		fmt.Printf("ошибка при получении числа - %s\n", err)
 		return
 	}
 
@@ -43,7 +43,7 @@ func main() {
 	fmt.Print("Введите максимальное значение: ")
 	_, err = fmt.Scan(&maxValue)
 	if err != nil {
-		fmt.Println("ошибка при получении числа")
+		fmt.Printf("ошибка при получении числа - %s\n", err)
 		return
 	}
 

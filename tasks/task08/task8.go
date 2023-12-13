@@ -27,7 +27,7 @@ func main() {
 	fmt.Print("Введите число: ")
 	_, err := fmt.Scan(&number)
 	if err != nil {
-		fmt.Println("ошибка при получении числа")
+		fmt.Printf("ошибка при получении числа - %s\n", err)
 		return
 	}
 
@@ -46,7 +46,7 @@ func main() {
 	fmt.Print("Введите позицию на которую будет вставлено значение: ")
 	_, err = fmt.Scan(&position)
 	if err != nil {
-		fmt.Println("ошибка при получении числа")
+		fmt.Printf("ошибка при получении числа - %s\n", err)
 		return
 	}
 
@@ -61,7 +61,7 @@ func main() {
 	fmt.Print("Введите значение, которое будет установлено на i-ую позицию (0/1): ")
 	_, err = fmt.Scan(&value)
 	if err != nil {
-		fmt.Println("ошибка при получении числа")
+		fmt.Printf("ошибка при получении числа - %s\n", err)
 		return
 	}
 
