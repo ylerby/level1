@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// инициализация переменных
+	// объявление переменных
 	var (
 		a,
 		b int
