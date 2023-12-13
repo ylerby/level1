@@ -12,7 +12,7 @@ func main() {
 	fmt.Print("Введите индекс удаляемого элемента: ")
 	_, err := fmt.Scan(&position)
 	if err != nil {
-		fmt.Printf("ошибка при получении индекса - %s", err)
+		fmt.Printf("ошибка при получении индекса - %s\n", err)
 		return
 	}
 
