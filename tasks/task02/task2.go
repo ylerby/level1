@@ -25,14 +25,14 @@ func main() {
 		wg.Add(1)
 
 		// анонимная горутина для вывода квадрата элементов
-		go func(elementIndex, element int) {
+		go func(wg *sync.WaitGroup, elementIndex, element int) {
 			// в конце выполнения горутины декрементируем счетчик горутин
 			defer wg.Done()
 
 			// вывод элемента, его квадрата, индекс
 			fmt.Printf("Элемент = %d, Квадрат элемента = %d, Индекс = %d\n",
 				element, element*element, elementIndex)
-		}(index, value)
+		}(wg, index, value)
 	}
 
 	// ожидание выполнения горутин
