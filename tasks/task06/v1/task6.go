@@ -5,6 +5,10 @@ import (
 	"sync"
 )
 
+/*
+Реализовать все возможные способы остановки выполнения горутины.
+*/
+
 func stop(wg *sync.WaitGroup, stopValue, maxValue int) {
 	defer wg.Done()
 

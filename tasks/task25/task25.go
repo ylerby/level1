@@ -5,6 +5,10 @@ import (
 	"time"
 )
 
+/*
+Реализовать собственную функцию sleep.
+*/
+
 func sleep(duration time.Duration) {
 	// иниуиализируем канал типа <- time.Time, из которого будет считано значение через время равное duration
 	timer := time.After(duration)

@@ -5,6 +5,10 @@ import (
 	"strconv"
 )
 
+/*
+Дана переменная int64. Разработать программу которая устанавливает i-й бит в 1 или 0.
+*/
+
 func setByte(strNumber string, position uint8, value uint8) int64 {
 	// формируем результирующее значение
 	result := strNumber[0:position] + fmt.Sprintf("%b", value) + strNumber[position+1:]

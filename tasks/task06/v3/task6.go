@@ -6,6 +6,10 @@ import (
 	"time"
 )
 
+/*
+Реализовать все возможные способы остановки выполнения горутины.
+*/
+
 func stop(wg *sync.WaitGroup, timeCh <-chan time.Time) {
 	defer wg.Done()
 	for {

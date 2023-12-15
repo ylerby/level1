@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+/*
+Реализовать пересечение двух неупорядоченных множеств.
+*/
+
 func merge[T comparable](firstSet, secondSet []T) []T {
 	var (
 		overallLen int

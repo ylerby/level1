@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+/*
+Реализовать бинарный поиск встроенными методами языка.
+*/
+
 func binarySearch(target int, arr []int) (int, bool) {
 	var mid, val int
 

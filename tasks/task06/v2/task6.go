@@ -6,6 +6,10 @@ import (
 	"time"
 )
 
+/*
+Реализовать все возможные способы остановки выполнения горутины.
+*/
+
 func stop(ctx context.Context) {
 	for {
 		select {
